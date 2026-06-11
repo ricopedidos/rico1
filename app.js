@@ -81,6 +81,12 @@ function mostrarProductos(lista) {
 
 window.filtrar = function(categoria) {
 
+  document
+    .querySelectorAll("#filtros button")
+    .forEach(btn => btn.classList.remove("activo"));
+
+  event.target.classList.add("activo");
+
   if (categoria === "todos") {
     mostrarProductos(todosLosProductos);
     return;
@@ -292,4 +298,20 @@ window.obtenerUbicacion = function() {
       alert("No se pudo obtener la ubicación");
     }
   );
+}
+window.buscarProductos = function() {
+
+  const texto =
+    document.getElementById("buscador")
+      .value
+      .toLowerCase();
+
+  const filtrados =
+    todosLosProductos.filter(producto =>
+      producto.nombre
+        .toLowerCase()
+        .includes(texto)
+    );
+
+  mostrarProductos(filtrados);
 }
