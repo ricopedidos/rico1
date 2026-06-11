@@ -285,7 +285,7 @@ window.obtenerUbicacion = function() {
       document.getElementById("ubicacion").value =
         link;
 
-      alert(link);
+      alert("Ubicación guardada");
 
     },
     function() {
