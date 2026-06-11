@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background: #121212;
+    color: white;
     margin: 0;
     padding: 20px;
 }
@@ -16,22 +17,25 @@ h1 {
 }
 
 .producto {
-    background: white;
+    background: rgb(30, 30, 31);
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    color:#d6d6d6
 }
 
 .producto h3 {
     margin-top: 0;
+    color:#d3d3d3
 }
 
 .categoria {
     display: inline-block;
     padding: 4px 10px;
     border-radius: 20px;
-    background: #eee;
+    background: #9b948b;
     margin-bottom: 10px;
+    color:#080808
 }
 
 .precio {
@@ -69,7 +73,7 @@ h1 {
 .subtitulo {
     margin-top: 1px;
     font-size: 18px;
-    color: #3a3a3a;
+    color: #ffffff;
 }
 h1,
 .subtitulo {
@@ -91,6 +95,16 @@ h1,
     font-weight: bold;
 }
 
+.controles button:first-child {
+    background: #a72c2c;
+    color: #410202;
+}
+
+.controles button:last-child {
+    background: #295533;
+    color: #14f550;
+}
+
 .controles span {
     font-size: 24px;
     font-weight: bold;
@@ -102,7 +116,15 @@ h1,
     width: 100%;
     box-sizing: border-box;
     margin-top: 10px;
-    padding: 10px;
+    padding: 12px;
+
+    background: #111111;
+    color: rgb(185, 185, 185);
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
 }
 
 #observaciones {
@@ -131,4 +153,67 @@ h1,
         font-size: 18px;
     }
 
+}
+#filtros {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    scrollbar-width: none;
+}
+
+#filtros::-webkit-scrollbar {
+    display: none;
+}
+
+#filtros button {
+    background: #2a2a2a;
+    color: white;
+}
+
+#filtros button.activo {
+    background: rgb(243, 149, 9);
+    color: black;
+    font-weight: bold;
+}
+#btn-whatsapp {
+    background: #03dd53;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#btn-whatsapp:hover {
+    opacity: 0.9;
+}
+
+#btn-ubicacion {
+    background: #313131;
+    color: white;
+    font-weight: bold;
+}
+
+#btn-vaciar {
+    background: #e8a5a5;
+    color: #5a2020;
+    font-weight: bold;
+}
+#detalle-carrito {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+#buscador {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+
+    background: #2a2a2a;
+    color: white;
 }
