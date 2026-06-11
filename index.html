@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>RICO</h1>
+<p class="subtitulo">Hace tu pedido</p>
+
+<div id="carrito">
+    🛒 Carrito (<span id="cantidad-carrito">0</span>)
+</div>
+
+<div id="detalle-carrito">
+    <h2>Tu pedido</h2>
+
+    <ul id="lista-carrito"></ul>
+
+    <h3>
+        Total: $<span id="total">0</span>
+    </h3>
+
+    <button onclick="vaciarCarrito()">
+    🗑 Vaciar carrito
+    </button>
+
+    <input
+    type="text"
+    id="direccion"
+    placeholder="Dirección de entrega">
+
+    <textarea
+    id="observaciones"
+    placeholder="Observaciones (opcional)">
+    </textarea>
+
+    <button onclick="obtenerUbicacion()">
+    📍 Compartir ubicación
+    </button>
+
+    <input
+    type="hidden"
+    id="ubicacion">
+
+    <button id="btn-whatsapp" onclick="enviarWhatsApp()">
+    Pedir por WhatsApp
+    </button>
+
+</div>
+
+<div id="filtros">
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('bebidas')">Bebidas</button>
+    <button onclick="filtrar('comidas')">Comidas</button>
+    <button onclick="filtrar('helados')">Helados</button>
+</div>
+
+    <div id="productos"></div>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
